@@ -43,7 +43,7 @@ export default function Home() {
             description="Understand the relationship between your students' emotions and their success to create a peaceful and rich learning experience. Use emotional metrics as your key-performance enabler."
             iconUrl={"./icons/functionality-card-image-04.png"}
             link={{
-              href: "https://webtekno.com",
+              href: "https://www.reddit.com/r/reactjs/",
               text: "Understand Your Students",
             }}
           />
@@ -56,7 +56,7 @@ export default function Home() {
             description="Determine the right problems to concentrate on to increase student success and teacher performance. Observe future performance with up to 92% accuracy."
             iconUrl={"./icons/functionality-card-image-05.png"}
             link={{
-              href: "https://webtekno.com",
+              href: "https://www.boredpanda.com/",
               text: "Begin Predicting the Future",
             }}
           />
@@ -69,7 +69,7 @@ export default function Home() {
             description="Deliver a secured exam environment for institutions. Create equal learning environment opportunities for students."
             iconUrl={"./icons/functionality-card-image-06.png"}
             link={{
-              href: "https://webtekno.com",
+              href: "https://techcrunch.com/",
               text: "Create a Fair Environment",
             }}
           />

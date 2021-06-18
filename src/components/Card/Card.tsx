@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { useOutsideClick } from "../../utils/hooks";
 import styles from "./Card.module.scss";
 
 interface CardProps {
@@ -14,21 +17,54 @@ interface CardProps {
 }
 
 export default function Card(props: CardProps) {
+  const [focus, setFocus] = useState(false);
+
+  const ref = useOutsideClick(function () {
+    setFocus(false);
+  });
+
+  const variants = {
+    focused: { scale: 1.1, backgroundColor: props.color },
+    default: { scale: 1 },
+  };
+
   return (
-    <div className={styles.card} style={{ borderColor: props.color }}>
+    <motion.div
+      className={styles.card}
+      style={{ borderColor: props.color }}
+      animate={focus ? variants.focused : variants.default}
+      onClick={() => {
+        setFocus(true);
+      }}
+      ref={ref}
+    >
       <div className={styles.content}>
-        <img width={50} src={props.iconUrl} alt="card-icon" />
-        <h3 style={{ color: props.color }}>{props.header}</h3>
-        <h4 style={{ color: props.color }}>- {props.subheader}</h4>
-        <p className={styles.description}>{props.description}</p>
+        <div>
+          <img
+            width={50}
+            src={props.iconUrl}
+            alt="card-icon"
+            style={{ filter: focus ? "brightness(0) invert(1)" : undefined }}
+          />
+        </div>
+        <h3 style={{ color: focus ? "#fff" : props.color }}>{props.header}</h3>
+        <h4 style={{ color: focus ? "#fff" : props.color }}>
+          - {props.subheader}
+        </h4>
+        <p
+          style={{ color: focus ? "#fff" : undefined }}
+          className={styles.description}
+        >
+          {props.description}
+        </p>
         {props.link ? (
           <a
-            style={{ color: props.color }}
+            style={{ color: focus ? "#fff" : props.color }}
             className={styles.link}
             href={props.link.href}
           >{`> ${props.link.text}`}</a>
         ) : null}
       </div>
-    </div>
+    </motion.div>
   );
 }
