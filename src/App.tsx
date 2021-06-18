@@ -14,6 +14,7 @@ function App() {
         <Route path="/data-visualization">
           <DataViz />
         </Route>
+     
       </Switch>
     </Router>
   );

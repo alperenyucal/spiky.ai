@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className={styles.navbar}>
       <Link to={"/"}>Home</Link>
-      <Link to={"/data-visualization"}>Data Visualization</Link>
+      <Link to={"/data-visualization"}>Time Chart</Link>
     </div>
   );
 }

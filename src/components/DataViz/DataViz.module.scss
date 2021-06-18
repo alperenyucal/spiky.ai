@@ -1,0 +1,36 @@
+.page {
+  min-height: 100vh;
+  padding: 10px;
+  @media only screen and (min-width: 800px) {
+    padding: 100px;
+  }
+  background-color: #f4f8fa;
+}
+
+.card {
+  display: flex;
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  background-color: #3a77cb;
+  border-radius: 0 25px 25px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+
+.chartWrapper {
+  flex: auto;
+  padding: 20px;
+}
