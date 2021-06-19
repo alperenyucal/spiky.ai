@@ -67,14 +67,16 @@ export default function DataViz({ title, items }: DataVizProps) {
         />
         <div className={styles.buttonGroup}>
           {items.map((item, index) => (
-            <Button
-              variant={selectedItemId === index ? "primary" : "outlined"}
-              onClick={() => {
-                setSelectedItemId(index);
-              }}
-            >
-              {item.title}
-            </Button>
+            <div key={index} className={styles.buttonWrapper}>
+              <Button
+                variant={selectedItemId === index ? "primary" : "outlined"}
+                onClick={() => {
+                  setSelectedItemId(index);
+                }}
+              >
+                {item.title}
+              </Button>
+            </div>
           ))}
         </div>
       </div>
