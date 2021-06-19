@@ -36,9 +36,10 @@
 .buttonGroup {
   display: flex;
   justify-content: center;
-  * {
-    margin: 10px 20px;
-  }
+}
+
+.buttonWrapper {
+  margin: 10px 20px;
 }
 
 .chartWrapper {
