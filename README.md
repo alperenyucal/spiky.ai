@@ -8,9 +8,9 @@ For development, you will only need Node.js installed on your environement.
 
 ## Installation
 
-  $ git clone https://github.com/alperenyucal/spiky.ai.git
-  $ cd spiky.ai
-  $ npm install
+    $ git clone https://github.com/alperenyucal/spiky.ai.git
+    $ cd spiky.ai
+    $ npm install
 
 ## Available Scripts
 
