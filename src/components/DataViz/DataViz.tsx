@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Chart from "react-apexcharts";
 import styles from "./DataViz.module.scss";
+import Button from "../Button/Button";
 
 export default function DataViz() {
   const [data, setData] = useState([
@@ -37,7 +38,11 @@ export default function DataViz() {
   return (
     <div className={styles.page}>
       <div className={styles.card}>
-        <div className={styles.panel}>Title</div>
+        <div className={styles.panel}>
+          <div className={styles.panelItem}>{`>`}</div>
+          <span className={styles.panelTitle}>Title</span>
+          <div className={styles.panelItem}>{`>`}</div>
+        </div>
         <div className={styles.chartWrapper}>
           <Chart
             options={{
@@ -83,6 +88,9 @@ export default function DataViz() {
             type="rangeBar"
             height={300}
           />
+          <Button>saasas</Button>
+          <Button variant="primary">saasas</Button>
+          <Button>saasas</Button>
         </div>
       </div>
     </div>
