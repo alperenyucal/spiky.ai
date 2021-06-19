@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# SPIKY.AI hiring task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo
+Demo is available at [https://spiky-ai.herokuapp.com/](https://spiky-ai.herokuapp.com/)
+## Requirements
+
+For development, you will only need Node.js installed on your environement.
+
+## Installation
+
+  $ git clone https://github.com/alperenyucal/spiky.ai.git
+  $ cd spiky.ai
+  $ npm install
 
 ## Available Scripts
 
